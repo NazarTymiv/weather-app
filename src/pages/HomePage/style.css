@@ -91,7 +91,8 @@
 
 /* Hourly weather */
 .hourlyWeather {
-    padding: 20px 30px;
+    margin-bottom: 35px;
+    padding: 20px 20px;
     width: 100%;
     border-radius: 25px;
     background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(72, 74, 130, 0.52) 0%, rgba(72, 74, 130, 0.23) 100%);
@@ -163,4 +164,112 @@
 .hourlyWeather__line {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.50);
+}
+
+
+/* Days Weather */
+.daysWeather {
+    margin-bottom: 35px;
+    padding: 20px 20px;
+    width: 100%;
+    border-radius: 25px;
+    background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(72, 74, 130, 0.52) 0%, rgba(72, 74, 130, 0.23) 100%);
+    backdrop-filter: blur(21px);
+}
+
+.daysWeather__title {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.daysWeather__title-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.daysWeather__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+}
+
+.daysWeather__item {
+    padding: 7.5px 0;
+    padding-right: 10px;
+}
+
+.daysWeather__item a {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90px 60px 1fr;
+    align-items: center;
+}
+
+.daysWeather__item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.daysWeather__item-day {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.daysWeather__item a svg {
+    width: 20px;
+}
+
+.daysWeather__item-temps {
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.daysWeather__item-humidity {
+    position: relative;
+    width: 90px;
+    height: 4px;
+    background-color: #484A82;
+    opacity: 0.5;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.daysWeather__item-humidity::before {
+    content: '';
+    width: 39%;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.daysWeather__item-temp {
+    position: relative;
+    font-size: 18px;
+    font-style: normal;
+    color: #fff;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.daysWeather__item-temp--min {
+    opacity: 0.5;
+}
+
+.daysWeather__item-temp::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 6px;
+    right: -8px;
+    border-radius: 100%;
+    border: 1px solid #FFF;
 }

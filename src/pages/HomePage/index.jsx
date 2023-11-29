@@ -1,4 +1,5 @@
 // components
+import DaysWeather from "./components/DaysWeather";
 import HourlyWeather from "./components/HourlyWeather";
 import MainWeatherInformation from "./components/MainWeatherInformation";
 
@@ -10,6 +11,8 @@ const HomePage = ({ conditions }) => {
             <MainWeatherInformation conditions={conditions} />
 
             <HourlyWeather />
+
+            <DaysWeather />
         </div>
     );
 };
