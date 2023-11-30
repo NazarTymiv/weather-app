@@ -68,7 +68,9 @@ const App = () => {
             {weatherData && (
                 <>
                     <img
-                        src={`/assets/backgrounds/${weatherString}.jfif`}
+                        src={`/assets/backgrounds/${
+                            weatherString && weatherString
+                        }.jfif`}
                         className="background"
                     />
 

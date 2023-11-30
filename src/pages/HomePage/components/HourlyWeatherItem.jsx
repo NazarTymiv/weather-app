@@ -5,7 +5,7 @@ const HourlyWeatherItem = ({ weatherData }) => {
                 <p className="hourlyWeather__item-time">
                     {new Date(
                         `July 21, 1983 ${weatherData.datetime}`
-                    ).getHours() === new Date().getHours()
+                    ).getUTCHours() === new Date().getUTCHours()
                         ? "Now"
                         : new Date(
                               `July 21, 1983 ${weatherData.datetime}`

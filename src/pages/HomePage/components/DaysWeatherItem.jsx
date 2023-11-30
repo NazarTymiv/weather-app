@@ -3,8 +3,8 @@ const DaysWeatherItem = ({ weatherData }) => {
         <li className="daysWeather__item">
             <a href="#">
                 <p className="daysWeather__item-day">
-                    {new Date(weatherData.datetime).getDate() ===
-                    new Date().getDate()
+                    {new Date(weatherData.datetime).getUTCDate() ===
+                    new Date().getUTCDate()
                         ? "Today"
                         : new Date(weatherData.datetime)
                               .toUTCString()

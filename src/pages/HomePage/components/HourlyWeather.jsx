@@ -12,8 +12,6 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
                 new Date().getUTCHours()
         );
 
-        alert(new Date().getUTCHours());
-
         setTopWeatherData(
             hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 5)
         );
