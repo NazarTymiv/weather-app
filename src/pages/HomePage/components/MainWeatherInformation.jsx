@@ -1,4 +1,8 @@
-const MainWeatherInformation = ({ locationName, currentWeather }) => {
+const MainWeatherInformation = ({
+    locationName,
+    currentWeather,
+    condition,
+}) => {
     return (
         <div className="mainInformation">
             <section className="mainInformation__dayTitle">
@@ -19,7 +23,10 @@ const MainWeatherInformation = ({ locationName, currentWeather }) => {
                 </p>
             </section>
             <section className="mainInformation__description">
-                <p className="mainInformation__description-title">Cloudy</p>
+                <p className="mainInformation__description-title">
+                    {condition[0].toUpperCase() +
+                        condition.split("-").join(" ").slice(1)}
+                </p>
                 <p className="mainInformation__description-text">
                     {locationName}
                 </p>

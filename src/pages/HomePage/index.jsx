@@ -5,12 +5,13 @@ import MainWeatherInformation from "./components/MainWeatherInformation";
 
 import "./style.css";
 
-const HomePage = ({ locationName, weatherData }) => {
+const HomePage = ({ locationName, weatherData, condition }) => {
     return (
         <div className="homePage">
             <MainWeatherInformation
                 locationName={locationName}
                 currentWeather={weatherData.currentConditions}
+                condition={condition}
             />
 
             <HourlyWeather hourlyWeatherList={weatherData.days[0].hours} />

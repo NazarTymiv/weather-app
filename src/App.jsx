@@ -81,6 +81,7 @@ const App = () => {
                                 <HomePage
                                     locationName={locationName}
                                     weatherData={weatherData}
+                                    condition={condition}
                                 />
                             }
                         />
