@@ -8,9 +8,11 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
     useEffect(() => {
         const indexTimeNow = hourlyWeatherList.findIndex(
             (item) =>
-                new Date(`July 21, 1983 ${item.datetime}`).getHours() ===
-                new Date().getHours()
+                new Date(`July 21, 1983 ${item.datetime}`).getUTCHours() ===
+                new Date().getUTCHours()
         );
+
+        alert(new Date().getUTCHours());
 
         setTopWeatherData(
             hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 5)
