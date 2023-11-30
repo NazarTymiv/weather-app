@@ -8,7 +8,6 @@ import { getCurrentSeason, getCurrentTime } from "./helpers/getDateData";
 import HomePage from "./pages/HomePage";
 
 const App = () => {
-    const [conditions, setConditions] = useState("cloudy");
     const [currentSeason, setCurrentSeason] = useState("");
     const [currentTime, setCurrentTime] = useState("");
 
@@ -18,17 +17,14 @@ const App = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container" data-theme="evening-cloudy">
             <img
                 src={`/assets/backgrounds/cloudy-summer.jfif`}
                 className="background"
             />
 
             <Routes>
-                <Route
-                    path="/"
-                    element={<HomePage conditions={conditions} />}
-                />
+                <Route path="/" element={<HomePage />} />
             </Routes>
         </div>
     );

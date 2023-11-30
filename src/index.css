@@ -27,3 +27,70 @@
   object-fit: cover;
   z-index: -1;
 }
+
+[data-theme="winter-cloudy"] {
+  --main-background-color: #91B4C6;
+  --main-accent-color: #CAD7DF;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(145, 180, 198, 0.52) 0%, rgba(145, 180, 198, 0.23) 100%);
+}
+
+[data-theme="morning-cloudy"] {
+  --main-background-color: #5A8BAB;
+  --main-accent-color: #AED5E4;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(90, 139, 171, 0.52) 0%, rgba(90, 139, 171, 0.23) 100%);
+}
+
+[data-theme="afternoon-cloudy"] {
+  --main-background-color: #AC736A;
+  --main-accent-color: #F6C8A4;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(172, 115, 106, 0.52) 0%, rgba(172, 115, 106, 0.23) 100%);
+}
+
+[data-theme="evening-cloudy"] {
+  --main-background-color: #9090AC;
+  --main-accent-color: #484A82;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(72, 74, 130, 0.52) 0%, rgba(72, 74, 130, 0.23) 100%);
+}
+
+[data-theme="morning-sunny"] {
+  --main-background-color: #9FDCA8;
+  --main-accent-color: #71A78F;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(142, 202, 150, 0.52) 0%, rgba(142, 202, 150, 0.23) 100%);
+}
+
+[data-theme="afternoon-sunny"] {
+  --main-background-color: #FAE2BD;
+  --main-accent-color: #EFAA82;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(250, 226, 189, 0.52) 0%, rgba(250, 226, 189, 0.23) 100%);
+}
+
+[data-theme="morning-rainy"] {
+  --main-background-color: #7FC3AE;
+  --main-accent-color: #C9E8E0;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(127, 195, 174, 0.52) 0%, rgba(127, 195, 174, 0.23) 100%);
+}
+
+[data-theme="afternoon-rainy"] {
+  --main-background-color: #40666A;
+  --main-accent-color: #C9E8E0;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(64, 102, 106, 0.52) 0%, rgba(64, 102, 106, 0.23) 100%);
+}
+
+[data-theme="evening-rainy"] {
+  --main-background-color: #615273;
+  --main-accent-color: #C2B8FF;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(204, 218, 255, 0.52) 0%, rgba(204, 218, 255, 0.23) 100%);
+}
+
+[data-theme="morning-snowy"] {
+  --main-background-color: #99B8CC;
+  --main-accent-color: #E4F1F9;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(153, 184, 204, 0.52) 0%, rgba(153, 184, 204, 0.23) 100%);
+}
+
+[data-theme="afternoon-snowy"],
+[data-theme="evening-snowy"] {
+  --main-background-color: #A7ACC4;
+  --main-accent-color: #E2E2E3;
+  --background-block-color: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(167, 172, 196, 0.52) 0%, rgba(167, 172, 196, 0.23) 100%);
+}

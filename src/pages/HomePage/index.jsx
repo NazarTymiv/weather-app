@@ -5,10 +5,10 @@ import MainWeatherInformation from "./components/MainWeatherInformation";
 
 import "./style.css";
 
-const HomePage = ({ conditions }) => {
+const HomePage = () => {
     return (
         <div className="homePage">
-            <MainWeatherInformation conditions={conditions} />
+            <MainWeatherInformation />
 
             <HourlyWeather />
 
