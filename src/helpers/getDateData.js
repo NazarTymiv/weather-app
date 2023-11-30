@@ -17,11 +17,13 @@ export const getCurrentTime = (setCurrentTime, sunData) => {
     const sunrise = new Date(`July 21, 1983 ${sunData.sunrise}`).getHours();
     const sunset = new Date(`July 21, 1983 ${sunData.sunset}`).getHours();
 
-    if (currentHour >= sunrise && currentHour <= 12) {
+    console.log(currentHour);
+
+    if (currentHour >= sunrise && currentHour < 12) {
         setCurrentTime("morning");
-    } else if (currentHour >= 12 && currentHour <= sunset) {
+    } else if (currentHour >= 12 && currentHour < sunset) {
         setCurrentTime("afternoon");
-    } else if (currentHour >= sunset && currentHour <= sunrise) {
+    } else if (currentHour >= sunset && currentHour < sunrise) {
         setCurrentTime("evening");
     }
 };
