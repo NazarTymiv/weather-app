@@ -52,7 +52,7 @@
     line-height: normal;
     width: 122px;
     height: 150px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 /* .mainInformation__conditions-temp::before {
@@ -150,7 +150,7 @@
     line-height: normal;
     height: 23px;
     width: 19px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 /* 
@@ -260,7 +260,7 @@
     color: #fff;
     font-weight: 500;
     line-height: normal;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .daysWeather__item-temp--min {
