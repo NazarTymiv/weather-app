@@ -52,9 +52,10 @@
     line-height: normal;
     width: 122px;
     height: 150px;
+    text-wrap: nowrap;
 }
 
-.mainInformation__conditions-temp::before {
+/* .mainInformation__conditions-temp::before {
     content: '';
     width: 7.5px;
     height: 7.5px;
@@ -63,7 +64,7 @@
     right: -10px;
     border-radius: 100%;
     border: 4px solid var(--main-accent-color);
-}
+} */
 
 .mainInformation__description {
     width: 100%;
@@ -111,10 +112,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 10px;
 }
 
 .hourlyWeather__item a {
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,8 +150,10 @@
     line-height: normal;
     height: 23px;
     width: 19px;
+    text-wrap: nowrap;
 }
 
+/* 
 .hourlyWeather__item-temp::before {
     content: '';
     width: 4px;
@@ -160,7 +163,7 @@
     right: -6px;
     border-radius: 100%;
     border: 1px solid #FFF;
-}
+} */
 
 .hourlyWeather__line {
     border-radius: 10px;
@@ -200,13 +203,12 @@
 
 .daysWeather__item {
     padding: 7.5px 0;
-    padding-right: 10px;
 }
 
 .daysWeather__item a {
     width: 100%;
     display: grid;
-    grid-template-columns: 90px 60px 1fr;
+    grid-template-columns: 80px 50px 1fr;
     align-items: center;
 }
 
@@ -230,6 +232,7 @@
     width: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .daysWeather__item-humidity {
@@ -239,12 +242,11 @@
     background-color: rgba(255, 255, 255, 0.3);
     opacity: 0.5;
     border-radius: 10px;
-    margin: 0 20px;
 }
 
-.daysWeather__item-humidity::before {
+.daysWeather__item-humidity--line {
     content: '';
-    width: 39%;
+    width: 30%;
     height: 4px;
     background: #fff;
     position: absolute;
@@ -258,12 +260,14 @@
     color: #fff;
     font-weight: 500;
     line-height: normal;
+    text-wrap: nowrap;
 }
 
 .daysWeather__item-temp--min {
     opacity: 0.5;
 }
 
+/* 
 .daysWeather__item-temp::before {
     content: '';
     width: 4px;
@@ -273,4 +277,4 @@
     right: -8px;
     border-radius: 100%;
     border: 1px solid #FFF;
-}
+} */
