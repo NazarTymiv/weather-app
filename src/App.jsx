@@ -50,7 +50,7 @@ const App = () => {
     }, [location]);
 
     useEffect(() => {
-        if ((currentSeason, condition, currentTime)) {
+        if (currentSeason && condition && currentTime) {
             setWeatherString(
                 `${currentSeason === "winter" ? "winter" : currentTime}-${
                     condition.split("-").length === 3
