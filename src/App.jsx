@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 // helpers
-import { getCurrentSeason, getCurrentTime } from "./helpers/getDateData";
+import { getCurrentTime } from "./helpers/getDateData";
 import { getLocation, getLocationName } from "./helpers/getLocation";
 
 // components
@@ -16,7 +16,6 @@ const App = () => {
     const [weatherString, setWeatherString] = useState(null);
 
     // Time Data
-    const [currentSeason, setCurrentSeason] = useState(null);
     const [currentTime, setCurrentTime] = useState(null);
 
     // Location Data
@@ -28,7 +27,6 @@ const App = () => {
     const [condition, setCondition] = useState(null);
 
     useEffect(() => {
-        getCurrentSeason(setCurrentSeason);
         getLocation(setLocation);
     }, []);
 
@@ -50,9 +48,9 @@ const App = () => {
     }, [location]);
 
     useEffect(() => {
-        if (currentSeason && condition && currentTime) {
+        if (condition && currentTime) {
             setWeatherString(
-                `${currentSeason === "winter" ? "winter" : currentTime}-${
+                `${currentTime}-${
                     condition.split("-").length === 3
                         ? condition.split("-")[1]
                         : condition.split("-").length === 2
@@ -61,7 +59,7 @@ const App = () => {
                 }`
             );
         }
-    }, [currentSeason, condition, currentTime]);
+    }, [condition, currentTime]);
 
     return (
         <div className="container" data-theme={weatherString && weatherString}>

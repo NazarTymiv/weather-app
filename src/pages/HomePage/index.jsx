@@ -6,6 +6,7 @@ import MainWeatherInformation from "./components/MainWeatherInformation";
 import "./style.css";
 
 const HomePage = ({ locationName, weatherData, condition }) => {
+    // console.log(weatherData.days[0].hours, weatherData.days[1].hours);
     return (
         <div className="homePage">
             <MainWeatherInformation

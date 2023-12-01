@@ -20,6 +20,8 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
         );
     }, []);
 
+    // console.log(topWeatherData, bottomWeatherData);
+
     return (
         <div className="hourlyWeather">
             <section className="hourlyWeather__section">
