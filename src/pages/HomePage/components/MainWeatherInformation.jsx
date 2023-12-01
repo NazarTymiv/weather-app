@@ -1,4 +1,4 @@
-import PickIcon from "../../../helpers/pickIcon";
+import PickIcon from "../../../helpers/PickIcon";
 
 const MainWeatherInformation = ({
     locationName,
