@@ -93,12 +93,6 @@
 
 /* Hourly weather */
 .hourlyWeather {
-    margin-bottom: 35px;
-    padding: 20px 20px;
-    width: 100%;
-    border-radius: 25px;
-    background: var(--background-block-color);
-    backdrop-filter: blur(21px);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1px auto;
@@ -172,28 +166,13 @@
 
 
 /* Days Weather */
-.daysWeather {
-    margin-bottom: 35px;
-    padding: 20px 20px;
-    width: 100%;
-    border-radius: 25px;
-    background: var(--background-block-color);
-    backdrop-filter: blur(21px);
-}
+.daysWeather {}
 
 .daysWeather__title {
-    width: 100%;
-    height: auto;
-    padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.30);
 }
 
-.daysWeather__title-text {
-    font-size: 13px;
-    font-weight: 400;
-    color: #fff;
-    opacity: 0.8;
-}
+.daysWeather__title-text {}
 
 .daysWeather__list {
     display: grid;
@@ -278,3 +257,69 @@
     border-radius: 100%;
     border: 1px solid #FFF;
 } */
+
+/* weatherVisUVIdx */
+.weatherVisUVIdx {
+    height: 175px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.weatherVisUVIdx .information__block {
+    padding: 15px 20px;
+}
+
+.weatherVisUVIdx__Vis {
+    width: 100%;
+}
+
+.weatherVisUVIdx__number {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.weatherVisUVIdx__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    font-style: normal;
+    line-height: normal;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.weatherVisUVIdx__UV-progressbar {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.weatherVisUVIdx__UV-progressbar--line {
+    content: '';
+    width: 30%;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.weatherVisUVIdx__UV-progressbar--line::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+}

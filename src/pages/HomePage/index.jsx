@@ -1,12 +1,18 @@
+import { useEffect } from "react";
+
 // components
 import DaysWeather from "./components/DaysWeather";
 import HourlyWeather from "./components/HourlyWeather";
 import MainWeatherInformation from "./components/MainWeatherInformation";
+import WeatherVisUVIdx from "./components/WeatherVisUVIdx";
 
 import "./style.css";
 
 const HomePage = ({ locationName, weatherData, condition }) => {
-    // console.log(weatherData.days[0].hours, weatherData.days[1].hours);
+    useEffect(() => {
+        // console.log(weatherData);
+    }, []);
+
     return (
         <div className="homePage">
             <MainWeatherInformation
@@ -18,6 +24,8 @@ const HomePage = ({ locationName, weatherData, condition }) => {
             <HourlyWeather hourlyWeatherList={weatherData.days[0].hours} />
 
             <DaysWeather daysWeatherList={weatherData.days} />
+
+            <WeatherVisUVIdx currentWeather={weatherData.days[0]} />
         </div>
     );
 };

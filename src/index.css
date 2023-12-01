@@ -13,10 +13,11 @@
 
 .container {
   position: relative;
-  width: 100%;
+  max-width: 750px;
   min-height: 100vh;
   height: auto;
   padding: 54px 34px;
+  margin: 0 auto;
 }
 
 .background {
@@ -27,6 +28,27 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+}
+
+.information__block {
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  border-radius: 25px;
+  background: var(--background-block-color);
+  backdrop-filter: blur(21px);
+}
+
+.information__block-title {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.information__block-title--text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.8;
 }
 
 [data-theme="morning-cloudy"],

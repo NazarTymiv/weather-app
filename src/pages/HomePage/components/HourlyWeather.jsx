@@ -23,7 +23,7 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
     // console.log(topWeatherData, bottomWeatherData);
 
     return (
-        <div className="hourlyWeather">
+        <div className="hourlyWeather information__block">
             <section className="hourlyWeather__section">
                 <ul className="hourlyWeather__list">
                     {topWeatherData &&
