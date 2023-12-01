@@ -8,7 +8,7 @@ import WeatherVisUVIdx from "./components/WeatherVisUVIdx";
 
 import "./style.css";
 
-const HomePage = ({ locationName, weatherData, condition }) => {
+const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
     useEffect(() => {
         // console.log(weatherData);
     }, []);
@@ -19,6 +19,7 @@ const HomePage = ({ locationName, weatherData, condition }) => {
                 locationName={locationName}
                 currentWeather={weatherData.currentConditions}
                 condition={condition}
+                weatherString={weatherString}
             />
 
             <HourlyWeather hourlyWeatherList={weatherData.days[0].hours} />

@@ -80,6 +80,7 @@ const App = () => {
                                     locationName={locationName}
                                     weatherData={weatherData}
                                     condition={condition}
+                                    weatherString={weatherString}
                                 />
                             }
                         />
