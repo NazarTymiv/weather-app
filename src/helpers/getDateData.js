@@ -17,10 +17,6 @@ export const getCurrentTime = (setCurrentTime, sunData) => {
     const sunrise = new Date(`July 21, 1983 ${sunData.sunrise}`).getUTCHours();
     const sunset = new Date(`July 21, 1983 ${sunData.sunset}`).getUTCHours();
 
-    alert(
-        `currentHour: ${currentHour}, sunrise: ${sunrise}, sunset: ${sunset}, sunData.sunrise: ${sunData.sunrise}, sunData.sunset: ${sunData.sunset}`
-    );
-
     if (currentHour >= sunrise && currentHour < 12) {
         setCurrentTime("morning");
     } else if (currentHour >= 12 && currentHour < sunset) {
