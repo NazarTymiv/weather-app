@@ -6,7 +6,9 @@ const MainWeatherInformation = ({
     return (
         <div className="mainInformation">
             <section className="mainInformation__dayTitle">
-                <h3 className="mainInformation__dayTitle-text">Today</h3>
+                <h3 className="mainInformation__dayTitle-text">
+                    Today <br /> {new Date().toUTCString().slice(16, 22)}
+                </h3>
             </section>
             <section className="mainInformation__conditions">
                 <svg

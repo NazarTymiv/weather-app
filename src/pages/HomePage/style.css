@@ -23,6 +23,7 @@
 }
 
 .mainInformation__dayTitle-text {
+    text-align: center;
     color: var(--main-accent-color);
     font-size: 25px;
     font-style: normal;
