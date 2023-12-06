@@ -35,7 +35,7 @@ const WeatherVisUVIdx = ({ currentWeather }) => {
                             {uvIndex}
                         </span>
                         <p className="weatherVisUVIdx__text">
-                            {uvIndex <= 1
+                            {uvIndex <= 1 || !uvIndex
                                 ? "Low"
                                 : uvIndex > 1 && uvIndex <= 3
                                 ? "Moderate"
