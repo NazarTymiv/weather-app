@@ -20,7 +20,7 @@ const HourlyWeatherItem = ({ weatherData }) => {
                     ).getUTCHours() === new Date().getUTCHours()
                         ? "Now"
                         : new Date(
-                              `July 21, 1983 ${weatherData.datetime}`
+                              `July 21, 2023 ${weatherData.datetime}`
                           ).toLocaleTimeString("en-US", {
                               timeZone: "UTC",
                               hour12: true,

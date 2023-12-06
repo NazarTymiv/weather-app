@@ -7,20 +7,18 @@ const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
     useEffect(() => {
         const indexTimeNow = hourlyWeatherList.findIndex(
             (item) =>
-                new Date(`July 21, 1983 ${item.datetime}`).getUTCHours() ===
+                new Date(`July 21, 2023 ${item.datetime}`).getUTCHours() ===
                 new Date().getUTCHours()
         );
 
         setWeatherData(
-            hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 11)
+            hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 10)
         );
     }, []);
 
     useEffect(() => {
-        weatherData && console.log(weatherData.length);
+        // weatherData && console.log(weatherData.length);
     }, [weatherData]);
-
-    // console.log(topWeatherData, bottomWeatherData);
 
     return (
         <div className="hourlyWeather information__block">
