@@ -94,13 +94,15 @@
 
 /* Hourly weather */
 .hourlyWeather {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     row-gap: 20px;
 }
 
-.hourlyWeather__section {}
+.hourlyWeather__section {
+    max-width: 100%;
+}
 
 .hourlyWeather__list {
     width: 100%;
@@ -150,19 +152,9 @@
     white-space: nowrap;
 }
 
-/* 
-.hourlyWeather__item-temp::before {
-    content: '';
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    top: 0;
-    right: -6px;
-    border-radius: 100%;
-    border: 1px solid #FFF;
-} */
-
 .hourlyWeather__line {
+    width: 100%;
+    height: 1px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.50);
 }
