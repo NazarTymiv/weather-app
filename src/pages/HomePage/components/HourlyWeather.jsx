@@ -11,9 +11,7 @@ const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
                 new Date().getUTCHours()
         );
 
-        setWeatherData(
-            hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 10)
-        );
+        setWeatherData(hourlyWeatherList.slice(indexTimeNow));
     }, []);
 
     useEffect(() => {
