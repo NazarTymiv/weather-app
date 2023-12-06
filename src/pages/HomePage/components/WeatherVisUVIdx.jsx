@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const WeatherVisUVIdx = ({ currentWeather }) => {
-    const [uvIndex, setUvIndex] = useState(null);
+    const [uvIndex, setUvIndex] = useState(0);
     const [visibility, setVisibility] = useState(null);
 
     useEffect(() => {
@@ -29,34 +29,28 @@ const WeatherVisUVIdx = ({ currentWeather }) => {
                 <div className="information__block-title">
                     <h3 className="information__block-title--text">UV INDEX</h3>
                 </div>
-                {uvIndex && (
-                    <div className="weatherVisUVIdx__UV">
-                        <span className="weatherVisUVIdx__number">
-                            {uvIndex}
-                        </span>
-                        <p className="weatherVisUVIdx__text">
-                            {uvIndex <= 1 || !uvIndex
-                                ? "Low"
-                                : uvIndex > 1 && uvIndex <= 3
-                                ? "Moderate"
-                                : uvIndex > 3 && uvIndex <= 6
-                                ? "High"
-                                : uvIndex < 6 && uvIndex <= 8
-                                ? "Very High"
-                                : uvIndex > 8 && "Extreme"}
-                        </p>
-                        <div className="weatherVisUVIdx__UV-progressbar">
-                            <div
-                                className="weatherVisUVIdx__UV-progressbar--line"
-                                style={{
-                                    width: `${Math.round(
-                                        (uvIndex / 11) * 100
-                                    )}%`,
-                                }}
-                            ></div>
-                        </div>
+                <div className="weatherVisUVIdx__UV">
+                    <span className="weatherVisUVIdx__number">{uvIndex}</span>
+                    <p className="weatherVisUVIdx__text">
+                        {uvIndex <= 1
+                            ? "Low"
+                            : uvIndex > 1 && uvIndex <= 3
+                            ? "Moderate"
+                            : uvIndex > 3 && uvIndex <= 6
+                            ? "High"
+                            : uvIndex < 6 && uvIndex <= 8
+                            ? "Very High"
+                            : uvIndex > 8 && "Extreme"}
+                    </p>
+                    <div className="weatherVisUVIdx__UV-progressbar">
+                        <div
+                            className="weatherVisUVIdx__UV-progressbar--line"
+                            style={{
+                                width: `${Math.round((uvIndex / 11) * 100)}%`,
+                            }}
+                        ></div>
                     </div>
-                )}
+                </div>
             </div>
         </div>
     );

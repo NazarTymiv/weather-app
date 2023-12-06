@@ -11,7 +11,7 @@ const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
                 new Date().getUTCHours()
         );
 
-        setWeatherData(hourlyWeatherList.slice(indexTimeNow));
+        setWeatherData(hourlyWeatherList.slice(-1));
     }, []);
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
             <div className="hourlyWeather__line"></div>
             <section className="hourlyWeather__section">
                 <ul className="hourlyWeather__list">
-                    {weatherData &&
+                    {/* {weatherData &&
                         weatherData
                             .slice(5)
                             .map((item, index) => (
@@ -44,7 +44,7 @@ const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
                                     key={index}
                                     weatherData={item}
                                 />
-                            ))}
+                            ))} */}
                 </ul>
             </section>
         </div>
