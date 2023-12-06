@@ -22,7 +22,10 @@ const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
                 weatherString={weatherString}
             />
 
-            <HourlyWeather hourlyWeatherList={weatherData.days[0].hours} />
+            <HourlyWeather
+                hourlyWeatherList={weatherData.days[0].hours}
+                nextDayHourly={weatherData.days[1].hours}
+            />
 
             <DaysWeather daysWeatherList={weatherData.days} />
 

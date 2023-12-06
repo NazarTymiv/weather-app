@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import HourlyWeatherItem from "./HourlyWeatherItem";
 
-const HourlyWeather = ({ hourlyWeatherList }) => {
-    const [topWeatherData, setTopWeatherData] = useState(null);
-    const [bottomWeatherData, setBottomWeatherData] = useState(null);
+const HourlyWeather = ({ hourlyWeatherList, nextDayHourly }) => {
+    const [weatherData, setWeatherData] = useState(null);
 
     useEffect(() => {
         const indexTimeNow = hourlyWeatherList.findIndex(
@@ -12,13 +11,14 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
                 new Date().getUTCHours()
         );
 
-        setTopWeatherData(
-            hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 5)
-        );
-        setBottomWeatherData(
-            hourlyWeatherList.slice(indexTimeNow + 5, indexTimeNow + 10)
+        setWeatherData(
+            hourlyWeatherList.slice(indexTimeNow, indexTimeNow + 11)
         );
     }, []);
+
+    useEffect(() => {
+        weatherData && console.log(weatherData.length);
+    }, [weatherData]);
 
     // console.log(topWeatherData, bottomWeatherData);
 
@@ -26,19 +26,29 @@ const HourlyWeather = ({ hourlyWeatherList }) => {
         <div className="hourlyWeather information__block">
             <section className="hourlyWeather__section">
                 <ul className="hourlyWeather__list">
-                    {topWeatherData &&
-                        topWeatherData.map((item, index) => (
-                            <HourlyWeatherItem key={index} weatherData={item} />
-                        ))}
+                    {weatherData &&
+                        weatherData
+                            .slice(0, 5)
+                            .map((item, index) => (
+                                <HourlyWeatherItem
+                                    key={index}
+                                    weatherData={item}
+                                />
+                            ))}
                 </ul>
             </section>
             <div className="hourlyWeather__line"></div>
             <section className="hourlyWeather__section">
                 <ul className="hourlyWeather__list">
-                    {bottomWeatherData &&
-                        bottomWeatherData.map((item, index) => (
-                            <HourlyWeatherItem key={index} weatherData={item} />
-                        ))}
+                    {weatherData &&
+                        weatherData
+                            .slice(5)
+                            .map((item, index) => (
+                                <HourlyWeatherItem
+                                    key={index}
+                                    weatherData={item}
+                                />
+                            ))}
                 </ul>
             </section>
         </div>
