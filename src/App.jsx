@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 // helpers
 import { getCurrentTime } from "./helpers/getDateData";
 import { getLocation, getLocationName } from "./helpers/getLocation";
+import { getCondition } from "./helpers/getCondition";
 
 // components
 import HomePage from "./pages/HomePage";
@@ -49,15 +50,7 @@ const App = () => {
 
     useEffect(() => {
         if (condition && currentTime) {
-            setWeatherString(
-                `${currentTime}-${
-                    condition.split("-").length === 3
-                        ? condition.split("-")[1]
-                        : condition.split("-").length === 2
-                        ? condition.split("-")[0]
-                        : condition
-                }`
-            );
+            setWeatherString(`${currentTime}-${getCondition(condition)}`);
         }
     }, [condition, currentTime]);
 

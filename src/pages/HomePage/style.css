@@ -134,6 +134,8 @@
 
 .hourlyWeather__item-data svg {
     width: 16px;
+    height: fit-content;
+    fill: #fff;
 }
 
 .hourlyWeather__item-temp {
@@ -206,6 +208,8 @@
 
 .daysWeather__item a svg {
     width: 20px;
+    height: fit-content;
+    fill: #fff;
 }
 
 .daysWeather__item-temps {
