@@ -5,17 +5,19 @@ import DaysWeather from "./components/DaysWeather";
 import HourlyWeather from "./components/HourlyWeather";
 import MainWeatherInformation from "./components/MainWeatherInformation";
 import WeatherVisUVIdx from "./components/WeatherVisUVIdx";
+import WeatherWind from "./components/WeatherWind";
 
 import "./style.css";
 
 const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
     useEffect(() => {
-        console.log(weatherData.days[0].hours);
-        alert(
-            JSON.stringify(
-                weatherData.days[0].hours[weatherData.days[0].hours.length - 1]
-            )
-        );
+        // console.log(weatherData.days[0].hours);
+        // alert(
+        //     JSON.stringify(
+        //         weatherData.days[0].hours[weatherData.days[0].hours.length - 1]
+        //     )
+        // );
+        // console.log(weatherData.currentConditions);
     }, []);
 
     return (
@@ -34,7 +36,9 @@ const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
 
             <DaysWeather daysWeatherList={weatherData.days} />
 
-            <WeatherVisUVIdx currentWeather={weatherData.days[0]} />
+            <WeatherVisUVIdx currentWeather={weatherData.currentConditions} />
+
+            <WeatherWind currentWeather={weatherData.currentConditions} />
         </div>
     );
 };
