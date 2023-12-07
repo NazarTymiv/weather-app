@@ -10,7 +10,12 @@ import "./style.css";
 
 const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
     useEffect(() => {
-        // console.log(weatherData);
+        console.log(weatherData.days[0].hours);
+        alert(
+            JSON.stringify(
+                weatherData.days[0].hours[weatherData.days[0].hours.length - 1]
+            )
+        );
     }, []);
 
     return (
