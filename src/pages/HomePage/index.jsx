@@ -6,6 +6,7 @@ import HourlyWeather from "./components/HourlyWeather";
 import MainWeatherInformation from "./components/MainWeatherInformation";
 import WeatherVisUVIdx from "./components/WeatherVisUVIdx";
 import WeatherWind from "./components/WeatherWind";
+import WeatherFeelsPress from "./components/WeatherFeelsPress";
 
 import "./style.css";
 
@@ -39,6 +40,8 @@ const HomePage = ({ locationName, weatherData, condition, weatherString }) => {
             <WeatherVisUVIdx currentWeather={weatherData.currentConditions} />
 
             <WeatherWind currentWeather={weatherData.currentConditions} />
+
+            <WeatherFeelsPress currentWeather={weatherData.currentConditions} />
         </div>
     );
 };

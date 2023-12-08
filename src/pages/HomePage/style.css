@@ -256,14 +256,16 @@
 } */
 
 /* weatherVisUVIdx */
-.weatherVisUVIdx {
+.weatherVisUVIdx,
+.weatherFeelsPress {
     height: 175px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
-.weatherVisUVIdx .information__block {
+.weatherVisUVIdx .information__block,
+.weatherFeelsPress .information__block {
     padding: 15px 20px;
 }
 
@@ -396,7 +398,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .weatherWind__dir span {
@@ -406,4 +408,34 @@
 
 .weatherWind__dir span:nth-child(2) {
     font-weight: 600;
+}
+
+/* weatherFeelsPress */
+.weatherFeels__text {
+    font-size: 22px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.weatherPress {
+    padding-bottom: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+
+}
+
+.weatherPress__text {
+    font-size: 20px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
 }
