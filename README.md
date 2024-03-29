@@ -61,7 +61,7 @@ During my time at Boolean, I developed a comprehensive weather application. This
 
 ## Getting Started
 
-To get a local copy of **Jobify** and test it manually follow next steps.
+To get a local copy of **Weather App** and test it manually follow next steps.
 
 ### Prerequisites
 Install [nodeJS](https://nodejs.org/en/download/current) or update npm to latest version using next command.
