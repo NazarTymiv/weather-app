@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://jobify-io.netlify.app/">
+  <a href="https://weather-app-nazar.netlify.app/">
     <img src="https://icons.veryicon.com/png/o/miscellaneous/business-bicolor-icon/weather-109.png" alt="Logo" width="200">
   </a>
 
