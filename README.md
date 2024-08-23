@@ -46,7 +46,7 @@ During my time at Boolean, I developed a comprehensive weather application. This
   </a>
 
   <a href="https://www.w3schools.com/css/" style="margin-right: 15px;">
-      <img src="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png" alt="Logo" width="50">
+      <img src="https://dev.iamvdo.me/css3.png" alt="Logo" width="50">
   </a>
 
   <a href="https://axios-http.com/" style="margin-right: 15px;">
@@ -54,7 +54,7 @@ During my time at Boolean, I developed a comprehensive weather application. This
   </a>
 
   <a href="https://www.figma.com/" style="margin-right: 15px;">
-      <img src="https://static-00.iconduck.com/assets.00/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="Logo" width="50">
+      <img src="https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png" alt="Logo" width="50">
   </a>
 </div>
 
